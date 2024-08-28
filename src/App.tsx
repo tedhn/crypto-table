@@ -200,12 +200,14 @@ function App() {
           >
             <YAxis domain={["auto", "auto"]} hide />
 
-            {/* red color graph for downward trend & green for upward trend */}
+            {/* red color graph for downward trend & green for upward trend since 1st day vs last day */}
             <Line
               dataKey="price"
               stroke={
-                record.sparkline_in_7d.price[0] <
-                record.sparkline_in_7d.price[1]
+                record.sparkline_in_7d.price[0] >
+                record.sparkline_in_7d.price[
+                  record.sparkline_in_7d.price.length - 1
+                ]
                   ? "#d61616"
                   : "#19db39"
               }
