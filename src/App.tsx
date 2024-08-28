@@ -13,46 +13,6 @@ import { useEffect, useMemo, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Line, LineChart, YAxis } from "recharts";
 
-// Import the functions you need from the SDKs you need
-
-import { initializeApp } from "firebase/app";
-
-import { getAnalytics } from "firebase/analytics";
-
-// TODO: Add SDKs for Firebase products that you want to use
-
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-
-// Your web app's Firebase configuration
-
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-const firebaseConfig = {
-
-  apiKey: "AIzaSyBwu2qECR9iZckXRFt3F7cySkHkA7mVRVM",
-
-  authDomain: "crypto-table-ae7eb.firebaseapp.com",
-
-  databaseURL: "https://crypto-table-ae7eb-default-rtdb.europe-west1.firebasedatabase.app",
-
-  projectId: "crypto-table-ae7eb",
-
-  storageBucket: "crypto-table-ae7eb.appspot.com",
-
-  messagingSenderId: "221870897383",
-
-  appId: "1:221870897383:web:a7485c88cf674eedbf0a42",
-
-  measurementId: "G-F6YE9QGJ89"
-
-};
-// Initialize Firebase
-
-const app = initializeApp(firebaseConfig);
-
-const analytics = getAnalytics(app);
-
 const currencyItems: MenuProps["items"] = [
   { key: "USD $", label: "USD" },
   { key: "EUR €", label: "EUR" },
